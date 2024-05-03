@@ -1,8 +1,9 @@
 - 👋 Hi, I’m @Tinakerubo
-- 👀 I’m interested in software development front end and data analytics
-- 🌱 I’m currently learning on developing an HR performance management software
-- 💞️ I’m looking to collaborate on building a software to manage performance in an enterprise (in this case a bank)
-- 📫 reach me through my email address christinekerubo654@gmail.com
+- 👀 I’m interested in software development front end and data analytics.
+- 🌱 I’m currently working on an ERP inventory management system
+- 🌱 Have majored in oracle apps development such as reports,forms,workflows.
+- 💞️ I’m looking to collaborate on becoming an expert in Oracle Apps and front-end dev using Angular.
+- 📫 Reach me through my email address christinekerubo654@gmail.com
 - 😄 Pronouns: shes
 - ⚡ Fun fact:python was not named after a snake
 
