@@ -1,0 +1,45 @@
+import datetime
+
+def generate_receipt(items, voucher_number, shop_location, served_by):
+    total = 0
+    vat_rate = 0.16  # VAT rate of 16%
+    print("======= Receipt =======")
+    print(f"Date: {datetime.datetime.now().strftime('%Y-%m-%d %H:%M:%S')}")
+    print(f"Voucher Number: {voucher_number}")
+    print(f"Location: {shop_location}")
+    print("="*40)
+    print("{:<20} {:<10} {:<10} {:<10}".format("Item", "Price", "Quantity", "Subtotal (KSH)"))
+    print("-"* 50)
+    for item in items:
+        name = item['name']
+        details = item['details']
+        quantity, price = details['quantity'], details['price']
+        subtotal = quantity * price
+        print("{:<20} {:<10} {:<10} {:<10.2f}".format(name, price, quantity, subtotal))
+        total += subtotal
+    print("-"*50)
+    vat_amount = total * vat_rate
+    total_with_vat = total + vat_amount
+    print(f"Total (Excluding VAT): {total:.2f} KSH")
+    print(f"VAT ({vat_rate*100}%): {vat_amount:.2f} KSH")
+    print(f"Total (Including VAT): {total_with_vat:.2f} KSH")
+    print(f"Served by: {served_by}")
+    print("Thank you for shopping with us today!")
+
+def main():
+    # Sample items with details and price tags
+    items = [
+        {"name": "luminarc plate", "details": {"quantity": 3, "price": 10.99}},
+        {"name": "nunix fridge", "details": {"quantity": 1, "price": 70.99}},
+        {"name": "silicone spoons", "details": {"quantity": 2, "price": 15.49}}
+        # Add more items here with their specific details and price tags
+    ]
+    voucher_number = "123456789"
+    shop_location = "CRIKKA enterprises"
+    served_by = "Tinah"  # Example name of the person serving
+    generate_receipt(items, voucher_number, shop_location, served_by)
+
+if __name__ == "__main__":
+    main()
+    
+print("=" *50)
